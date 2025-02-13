@@ -1,0 +1,36 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+	/* grid-template-columns: 1fr 1fr 1fr; */
+    gap: 10px;
+}
+
+.grid img {  /* .grid img is more percise */
+    width: 90%;
+    height: 90%;
+    padding: 5px;
+    object-fit: cover;
+}
+
+.grid img:nth-child(even) {
+    border: 5px dashed orange;
+}
+
+.grid img:last-child {
+    grid-column: span 3;
+}
+
+.grid img:nth-child(1) {
+	border: 5px solid green;
+	padding: 10px;
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 2% 3% 90% 3% 2%;
+    }
+}
